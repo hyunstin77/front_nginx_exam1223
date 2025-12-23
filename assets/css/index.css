@@ -55,4 +55,16 @@
 
  footer {
      padding: 10px 0;
+     font-size: 12px;
+ }
+
+ #board-list {
+    width:80%; 
+    text-align: center;
+    border-collapse: collapse;
+ }
+
+ #board-list th,td {
+    border: #000 1px solid;
+    padding: 5px 8px;
  }
