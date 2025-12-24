@@ -2,7 +2,8 @@ const boardList = document.getElementById('board-list');
 
 const getList = async () => {
     try {
-        const res = await axios.get('http://localhost:8081/list')
+        // const res = await axios.get('http://localhost:8081/list')
+        const res = await axios.get('/api/board/list')
         const boards = res.data;
         boards.forEach(board=>{
             boardList.innerHTML += `
