@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <title>게시글 작성</title>
+    <style>
+        #boardForm {
+            width: 80%;
+        }
+
+        #board-list {
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        #board-list tr td input[type="text"] {
+            border: 1px solid #949494;
+            display: inline-block;
+            padding: 10px;
+            outline: none;
+        }
+
+        #board-list tr td input[type="text"]:focus {
+            box-sizing: border-box;
+            border-color: #000;
+        }
+
+        #title {
+            width: 100%;
+        }
+
+        #board-list tr {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        #board-list tr td {
+            text-align: center;
+            display: flex;
+            border: none;
+        }
+
+        #board-list tr td:first-child {
+            width: 80px;
+        }
+
+        #board-list tr td:last-child {
+            width: 100%;
+        }
+
+        #board-list textarea {
+            border: 1px solid #949494;
+            outline: none;
+            padding: 12px 10px;
+            resize: none;
+            width: 100%;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            font-size: 14px;
+        }
+
+        #board-list textarea:focus {
+            border-color: #000;
+        }
+
+        #submit-btn {
+            padding: 8px 30px;
+            border: 1px solid #000;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+
+        #submit-btn:hover {
+            color: #000;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h2>Nginx를 활용한 웹 페이지 실습</h2>
+            <ul id=nav>
+                <li><a href="index.html" class="nav-item">메인페이지</a></li>
+                <li><a href="" class="nav-item">상세페이지</a></li>
+                <li><a href="board.html" class="nav-item">게시판</a></li>
+            </ul>
+        </header>
+        <main>
+            <table id="board-list" style="justify-content: flex-start;">
+                <tr>
+                    <td>제목</td>
+                    <td id="title"></td>
+                </tr>
+                <tr>
+                    <td>작성자</td>
+                    <td id="writer"></td>
+                </tr>
+                <tr>
+                    <td>내용</td>
+                    <td id="content"></td>
+                </tr>
+                <tr>
+                    <td>첨부파일</td>
+                    <td><a id="download-link" style="color:#949494">다운로드</a><p style="display: none" id="null-msg">없음</p></td>
+                </tr>
+            </table>
+        </main>
+        <footer>
+            <p>Copyright @ 생성형 AI과정. All rights reserved</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/boardDetail.js"></script>
+</body>
+
+</html>
