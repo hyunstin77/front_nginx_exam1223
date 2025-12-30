@@ -13,7 +13,10 @@ const boardInsert = async (e) =>{
         console.log("api요청들어갔냐?")
         // let res = await axios.post('http://localhost:8081/api/board/register',boardData) // 테스트
         let res = await axios.post('/api/board/register',boardData)
-        console.log(res.data)
+
+        // 글 작성완료 후 게시판 페이지로 이동
+        location.href = "board.html";
+        
     }catch{
         console.log(err)
     }
